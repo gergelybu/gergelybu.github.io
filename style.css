@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: beige;
+    font-size: 10pt;
+}
+
+body{
+    background-image: url(/kepek/black.png);
+}
+
+main{
+    width: 90%;
+    max-height: 900px;
+    margin: auto;
+    background-color: #95999c;
+    display:grid;
+    grid-template-areas: 
+    "h h h"
+    "n n n"
+    "a a a"
+    "f f f";
+}
+
+header{
+    grid-area: h;
+    height: 300px;
+}
+
+header img{
+    background-size: cover;
+}
+
+
+nav {
+    grid-area: n;
+    background-color: grey;
+    height: auto;
+}
+
+nav ul li{
+    list-style-type: none;
+    background-color: grey;
+    display: inline-block;
+}
+
+nav ul li a{
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    background-color: orangered;
+}
+
+article{
+    grid-area: a;
+    text-align: justify;
+    height: auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding-left: 20px;
+}
+
+article p{
+    font-size: 10pt;
+}
+
+article h1{
+    font-size: 15px;
+}
+
+article img{
+    width: 300px;
+}
+
+article li {
+    list-style-type: square;
+}
+
+footer{
+    grid-area: f;
+    height: auto;
+    text-align: center;
+    background-color: orange;
+}
+
+@media screen and (max-width: 700px) {
+    nav ul li{
+        display: block;
+    }
+    article{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+}
